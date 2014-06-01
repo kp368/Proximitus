@@ -32,3 +32,8 @@ post '/signup' do
   end
   "Success."
 end
+
+# URL for Mill Road Mag
+get '/millroad' do
+  redirect '/'
+end
