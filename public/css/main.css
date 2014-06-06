@@ -104,3 +104,36 @@ form {
 }
 
 /* end form formatting */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "agb", 'ABeeZee', Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+header .intro-text .name {
+    font-family: "agb", 'ABeeZee', Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+header .intro-text .skills {
+    text-align: left;
+}
+
+@media(min-width:768px) {
+    header .container {
+        padding: 100px 0 100px;
+    }
+
+    header .intro-text .name {
+        font-size: 4em;
+    }
+}
+
+.navbar {
+    font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
