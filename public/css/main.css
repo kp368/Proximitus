@@ -53,6 +53,16 @@ h2 {
   margin-bottom: 1em;
 }
 
+hr.simple {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:      -o-linear-gradient(left, #ccc, #333, #ccc); 
+}
+
 .well-outline {
   background: transparent;
   border: 4px dotted white;
@@ -111,3 +121,11 @@ header .intro-text .skills {
     font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
+.contact-form {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.distant-row {
+  margin-top: 20px;
+}
