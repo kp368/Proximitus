@@ -6,14 +6,6 @@ body {
   font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-#success {
-  color: #40449B;
-}
-
-#error {
-  color: #E52228;
-}
-
 /* Header */
 .navbar-default {
   background-color: white;
@@ -49,20 +41,16 @@ body {
   font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-.value > h1 {
+h1 {
   font-size: 1.7em;
   margin-top: .8em;
-  margin-bottom: 2em;
-}
-
-.value > h2 {
-  font-size: 2em;
-  margin-top: .4em;
-  margin-bottom: .4em;
+  margin-bottom: 1.7em;
 }
 
 h2 {
-  margin-bottom: 31px;
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .well-outline {
@@ -80,10 +68,6 @@ form {
   color: black;
 }
 
-.form-control {
-  border-color: #7D838A;
-}
-
 .well-white {
   background-color: white;
 }
@@ -91,16 +75,6 @@ form {
 .form-group {
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-.btn-success {
-  background-color: #7bb666;
-  border-color: #7bb666;
-}
-
-.btn-success:hover, .btn-success:focus, .btn-success:active {
-  background-color: #3e6530;
-  border-color: #3e6530;
 }
 
 /* end form formatting */
