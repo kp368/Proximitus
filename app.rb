@@ -18,20 +18,23 @@ get '/' do
 end
 
 post '/signup' do
+  fname, lname = params[:name].split(' ', 2)
   email = params[:email]
-  unless email.nil? || email.strip.empty?
+  shopper = params[:shopper].nil? ? "no" : "yes"
+  owner = params[:owner].nil? ? "no" : "yes"
+  
+  merge_vars = {"FNAME"=>fname, "LNAME"=>lname, "SHOPPER"=>shopper, "OWNER"=>owner}
+  
+  halt 500 if email.nil? || email.strip.empty?
 
-    mailchimp = Hominid::API.new(settings.mailchimp_api_key)
-    list_id = mailchimp.find_list_id_by_name(settings.mailchimp_list_name)
-    raise "Unable to retrieve list id from MailChimp API." unless list_id
+  mailchimp = Hominid::API.new(settings.mailchimp_api_key)
+  list_id = mailchimp.find_list_id_by_name(settings.mailchimp_list_name)
+  raise "Unable to retrieve list id from MailChimp API." unless list_id
 
-    # http://apidocs.mailchimp.com/api/rtfm/listsubscribe.func.php
-    # double_optin, update_existing, replace_interests, send_welcome are all true by default (change as desired)
-    mailchimp.list_subscribe(list_id, email, {}, 'html', true, true, true, true)
-    
-    ga_track_event("Users", "Register", "Standard")
-
-  end
+  # http://apidocs.mailchimp.com/api/rtfm/listsubscribe.func.php
+  # double_optin, update_existing, replace_interests, send_welcome are all true by default (change as desired)
+  mailchimp.list_subscribe(list_id, email, merge_vars, 'html', true, true, true, true)
+  
   "Success."
 end
 

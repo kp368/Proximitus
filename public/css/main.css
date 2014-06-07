@@ -75,6 +75,15 @@ hr.simple {
 
 
 /* Form formatting */
+
+#success {
+    color: green;
+}
+
+#error {
+    color: red;
+}
+
 form {
   text-align: center;
   margin-top: 10px;

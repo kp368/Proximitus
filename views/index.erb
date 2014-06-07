@@ -107,8 +107,13 @@
                 </div>
                 <div class="col-md-4">
                   <div class="well well-white">
+                    
+                    <div id="notices">
+                      <div id="success" class="success" style="display: none;">Success! Please check your inbox for a confirmation request. To change any of the data you entered please fill out the form again.</div>
+                      <div id="error" class="error" style="display: none;">Sorry, the name or email address was incorrect. Please try again.</div>
+                    </div>
 
-                    <form action="/signup" class="form-group">
+                    <form action="/signup" class="form-group" id="signup-form">
                       <div class="form-group">
                         <label class="sr-only" for="name">Name</label>
                         <input id="name" name="name"  type="text" class="form-control" placeholder="Name">
@@ -120,13 +125,13 @@
                       <div class="form-group">
                         <div class="checkbox-inline">
                           <label>
-                            <input type="checkbox" value="shopper">
+                            <input type="checkbox" name="shopper">
                             I am a local shopper.
                           </label>
                         </div>
                         <div class="checkbox-inline">
                           <label>
-                            <input type="checkbox" value="owner">
+                            <input type="checkbox" name="owner">
                             I am a local shop owner.
                           </label>
                         </div>
