@@ -25,6 +25,9 @@ body {
 .navbar-fixed-top.navbar-shrink {
   padding: 0;
 }
+header img {
+    margin-bottom: 0;
+}
 /* end header */
 
 /* Wells */
