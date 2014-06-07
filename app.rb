@@ -20,6 +20,7 @@ end
 
 post '/signup' do
   fname, lname = params[:name].split(' ', 2)
+  lname = "" if lname.nil?
   email = params[:email]
   shopper = params[:shopper].nil? ? "no" : "yes"
   owner = params[:owner].nil? ? "no" : "yes"
