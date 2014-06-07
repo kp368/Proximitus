@@ -10,4 +10,9 @@ $(document).ready(function() {
       $("#notices #error").show();
     });
   });
+  $("#contact-form").submit(function(e) {
+    e.preventDefault();
+    $.post("/contact", $(this).serialize())
+  });
+  
 });

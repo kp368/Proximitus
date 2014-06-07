@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'hominid' # MailChimp
+require 'pony'
 
 configure do
 
@@ -36,6 +37,13 @@ post '/signup' do
   mailchimp.list_subscribe(list_id, email, merge_vars, 'html', true, true, true, true)
   
   "Success."
+end
+
+post '/contact' do
+  Pony.mail :to => "sam@proximitus.co",
+            :from => params[:email],
+            :subject => "Proximitus: message from #{params[:name]}!",
+            :body => params[:message]
 end
 
 # URL for Mill Road Mag
