@@ -36,7 +36,7 @@ post '/signup' do
   # http://apidocs.mailchimp.com/api/rtfm/listsubscribe.func.php
   # double_optin, update_existing, replace_interests, send_welcome are all true by default (change as desired)
   mailchimp.list_subscribe(list_id, email, merge_vars, 'html', true, true, true, true)
-  
+    
   "Success."
 end
 

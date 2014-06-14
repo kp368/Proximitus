@@ -5,6 +5,7 @@ $(document).ready(function() {
     $.post("/signup", $(this).serialize(), function() {
       $("#notices #success").show();
       $("form input#email").val("");
+      ga('send', 'event', 'Conversion', 'Sign-up');
     })
     .error(function() {
       $("#notices #error").show();
@@ -12,7 +13,9 @@ $(document).ready(function() {
   });
   $("#contact-form").submit(function(e) {
     e.preventDefault();
-    $.post("/contact", $(this).serialize())
+    $.post("/contact", $(this).serialize(), function() {
+      ga('send', 'event', 'Query', 'Contact us');
+    })
   });
   
 });
