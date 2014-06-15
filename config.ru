@@ -1,3 +1,5 @@
+$stdout.sync = true #enable logging in Heroku
+
 require 'rubygems'
 require 'bundler/setup'
 
