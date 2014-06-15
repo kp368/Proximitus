@@ -41,10 +41,7 @@ post '/signup' do
 end
 
 post '/contact' do
-  Pony.mail :to => "sam@proximitus.co",
-            :from => params[:email],
-            :subject => "Proximitus: message from #{params[:name]}!",
-            :body => params[:message]
+  puts 'Proximitus: message from #{params[:name]}<#{params[:email]}>: #{params[:message]}'
 end
 
 # URL for Mill Road Mag
