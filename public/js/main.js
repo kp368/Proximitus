@@ -14,6 +14,7 @@ $(document).ready(function() {
   $("#contact-form").submit(function(e) {
     e.preventDefault();
     $.post("/contact", $(this).serialize(), function() {
+      $(document).scrollTop(0);
       ga('send', 'event', 'Query', 'Contact us');
     })
   });
